@@ -1,0 +1,15 @@
+{
+  "name": "wonjaeho-portfolio",
+  "version": "1.0.0",
+  "description": "Won Jaeho — 풀스택 개발자 포트폴리오 (Vue3 / Spring Boot)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "build:html": "node build.mjs --html-only",
+    "build:pdf": "node build.mjs --pdf-only"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

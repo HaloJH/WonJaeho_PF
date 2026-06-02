@@ -1,0 +1,8 @@
+node_modules/
+
+# 내부 작업 컨텍스트 (공개 제외 — 고객사 경로/내부 메모 포함)
+CLAUDE.md
+
+*.log
+.DS_Store
+Thumbs.db
