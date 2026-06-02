@@ -93,12 +93,13 @@ export const PROJECTS = [
     role:      '프론트엔드, 백엔드',
     isMain:    true,
     stack: ['Vue 3', 'Vuetify', 'Spring Boot', 'MyBatis', 'Oracle'],
-    summary:   'AS-IS JSP 기반 레거시 시스템을 Vue 3 + Spring Boot로 전면 마이그레이션. 단순 화면 이관을 넘어 공용 컴포넌트·SQL 패턴·백엔드 패키지 구조까지 표준을 정립.',
+    summary:   'AS-IS JSP 기반 레거시 시스템을 Vue 3 + Spring Boot로 전면 마이그레이션. 요구 분석·화면 설계부터 UI 구현, 백엔드·DB, QA까지 전 영역을 담당했고, 기존 화면을 그대로 옮기지 않고 정보구조·동선을 다시 설계해 재구성. 공용 컴포넌트·SQL 패턴·백엔드 패키지 구조까지 표준을 정립.',
 
     contributions: [
       {
-        title: '공용 컴포넌트 시스템 설계 및 구축',
+        title: '화면 전면 재구성 · 공용 컴포넌트 시스템 설계',
         items: [
+          '<strong>AS-IS JSP 화면 제로베이스 재구성</strong> — 단순 이관이 아니라 정보구조·사용자 동선을 다시 설계해 Vue 3로 구현. 시안 의존 없이 화면 설계부터 구현까지 자력 수행.',
           '<strong>BrFileAttach / BrFileInput</strong> — 첨부파일 단일·다중 패턴 일원화. proStep+seqColumn 자동 매핑, stale race 방지 패턴 내장.',
           '<strong>BrVersionSelect</strong> — 이력 버전 셀렉트 공용화. 현재/이력 분기, displayLabel 슬롯 패턴.',
           '<strong>BrDateField / BrNumberField / EmpSearchField</strong> — 폼 입력 컴포넌트 표준화. prefix/suffix 슬롯 + jdbcType=VARCHAR 적용 가이드.',
