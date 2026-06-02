@@ -2,7 +2,7 @@
 
 > 레거시를 끌어올리고, 흩어진 코드에 표준을 부여하는 일에 강점이 있는 프론트엔드 중심 풀스택 개발자입니다.
 
-**🔗 포트폴리오 보기:** [원재호 포트폴리오](https://USERNAME.github.io/REPO/) · [PDF 다운로드](docs/원재호_포트폴리오.pdf)
+**🔗 포트폴리오 보기:** [원재호 포트폴리오](https://halojh.github.io/WonJaeho_PF/) · [PDF 다운로드](docs/원재호_포트폴리오.pdf)
 
 ---
 
