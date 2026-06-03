@@ -324,7 +324,7 @@
         화면 전면 재구성 · 공용 컴포넌트 시스템 설계
       </h3>
       <ul class="contribution-list">
-        <li><strong>AS-IS JSP 화면 제로베이스 재구성</strong> — 단순 이관이 아니라 정보구조·사용자 동선을 다시 설계해 Vue 3로 구현. 시안 의존 없이 화면 설계부터 구현까지 자력 수행.</li><li><strong>BrFileAttach / BrFileInput</strong> — 첨부파일 단일·다중 업로드 패턴을 공용 컴포넌트로 일원화. 화면마다 제각각이던 첨부 UI를 표준화.</li><li><strong>BrVersionSelect</strong> — 이력 버전 셀렉트 공용화. 현재/이력 분기, displayLabel 슬롯 패턴.</li><li><strong>BrDateField / BrNumberField / EmpSearchField</strong> — 폼 입력 컴포넌트 표준화. prefix/suffix 슬롯 + jdbcType=VARCHAR 적용 가이드.</li><li><strong>br-table-fill / br-tab / score-panel</strong> — 글로벌 utility class로 디자인 가이드 자동 반영.</li>
+        <li><strong>AS-IS JSP 화면 제로베이스 재구성</strong> — 단순 이관이 아니라 정보구조·사용자 동선을 다시 설계해 Vue 3로 구현. 시안 의존 없이 화면 설계부터 구현까지 자력 수행.</li><li><strong>반복 UI 패턴의 공용 컴포넌트화</strong> — 첨부파일, 폼 입력(날짜·숫자·코드 검색), 이력/버전 선택 등 화면마다 중복되던 UI를 유형별 표준 컴포넌트로 추출.</li><li><strong>공통 레이아웃·스타일 표준화</strong> — 테이블·탭·패널 등 공통 요소를 글로벌 스타일 규칙으로 분리해, 신규 화면이 별도 작업 없이 디자인 가이드를 그대로 따르도록 설계.</li><li><strong>조합형 개발 체계 확립</strong> — 신규 화면은 표준 컴포넌트 조합만으로 구현 → 코드 중복 제거, 화면 간 UI 일관성 확보, 유지보수성 향상.</li>
       </ul>
     </div>
   
@@ -334,7 +334,7 @@
         백엔드 구조 리팩토링
       </h3>
       <ul class="contribution-list">
-        <li>같은 특성 서비스끼리 패키지 분리 → 프론트 폴더구조와 백엔드 패키지 일치시켜 유지보수성 향상.</li><li>MyBatis OGNL 분기 → SQL CASE WHEN 우선 정책 도입. 가독성·디버깅 개선.</li><li>BIZ_MASTER / BIZ_PORTAL / NBM_BIZ_MASTER 등 핵심 테이블의 proStep 스코프 격리 + 역할코드 정리.</li>
+        <li>같은 특성 서비스끼리 패키지 분리 → 프론트 폴더구조와 백엔드 패키지 일치시켜 유지보수성 향상.</li><li>AS-IS의 복잡한 서비스 구조 개선 — 각 서비스 별로 흩어져 있던 Service 및 JSP를 하나로 통합해 가독성·디버깅 개선.</li><li>BIZ_MASTER / BIZ_PORTAL / NBM_BIZ_MASTER 등 핵심 테이블의 proStep 스코프 격리 + 역할코드 정리.</li>
       </ul>
     </div>
   
@@ -348,21 +348,11 @@
       </ul>
     </div>
   
-    <div class="contribution-block">
-      <h3 class="contribution-title">
-        <span class="contribution-num">04</span>
-        변경 이력 추적 시스템
-      </h3>
-      <ul class="contribution-list">
-        <li>BIZ_PORTAL_CHANGE_LOG 기반 변경 이력 적재·추적 구조 구현 — 데이터 변경 전후를 기록하고 조회.</li><li>현재/이력 버전 분기 조회 — BrVersionSelect 공용 컴포넌트와 연동해 버전 선택 UI 제공.</li>
-      </ul>
-    </div>
-  
 
   <div class="achievements-block">
     <h3 class="achievements-title">주요 성과</h3>
     <ul class="achievements-list">
-      <li><span class="check-mark">✓</span> 공용 컴포넌트 10여 종 정립 → 신규 화면 개발 시간 단축</li><li><span class="check-mark">✓</span> 백엔드 매퍼 분기 SQL 단순화로 디버깅 시간 감소</li><li><span class="check-mark">✓</span> DSN 산출물 매트릭스 검증 자동화로 휴먼 에러 사전 차단</li>
+      <li><span class="check-mark">✓</span> 반복 UI를 공용 컴포넌트로 표준화 → 신규 화면 개발 시간 단축</li><li><span class="check-mark">✓</span> 백엔드 서비스 구조 통합으로 가독성·디버깅 개선</li><li><span class="check-mark">✓</span> DSN 산출물 매트릭스 검증 자동화로 휴먼 에러 사전 차단</li>
     </ul>
   </div>
 </section>
