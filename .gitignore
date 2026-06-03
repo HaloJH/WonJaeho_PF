@@ -3,6 +3,9 @@ node_modules/
 # 내부 작업 컨텍스트 (공개 제외 — 고객사 경로/내부 메모 포함)
 CLAUDE.md
 
+# 지원 전략·난제 초안 등 비공개 작업노트
+작업노트_진행상황.md
+
 *.log
 .DS_Store
 Thumbs.db
