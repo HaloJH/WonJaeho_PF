@@ -110,7 +110,7 @@ export const PROJECTS = [
         items: [
           '같은 특성 서비스끼리 패키지 분리 → 프론트 폴더구조와 백엔드 패키지 일치시켜 유지보수성 향상.',
           'AS-IS의 복잡한 서비스 구조 개선 — 각 서비스 별로 흩어져 있던 Service 및 JSP를 하나로 통합해 가독성·디버깅 개선.',
-          'BIZ_MASTER / BIZ_PORTAL / NBM_BIZ_MASTER 등 핵심 테이블의 proStep 스코프 격리 + 역할코드 정리.',
+          '핵심 마스터 데이터의 업무 단계(step)별 범위를 분리하고, 역할 코드 체계를 정리해 단계·권한 혼선 방지.',
         ],
       },
       {
@@ -238,13 +238,13 @@ export const AI_SECTION = {
     {
       title: '공용 컴포넌트 패턴 합의 및 표준화',
       problem: '신규 화면 추가 시 다이얼로그·테이블·점수판 등이 화면별로 제각각.',
-      action: '기존 화면 코드 분석으로 공통 패턴 추출 → BrFileAttach·br-table-fill·score-panel 등 글로벌 utility로 추출. 메모리에 사용 가이드 영속화.',
+      action: '기존 화면 코드를 분석해 공통 UI 패턴 추출 → 첨부·테이블·패널 등 반복 요소를 글로벌 공용 컴포넌트/스타일로 표준화. 사용 가이드를 메모리에 영속화.',
       result: '신규 화면 개발 시 컴포넌트 import만으로 디자인 가이드 자동 반영. 코드 재사용성 향상.',
     },
     {
       title: '백엔드 패턴 일관성 가드',
-      problem: 'MyBatis OGNL 분기·jdbcType 누락·string compare 등 미세한 컨벤션 차이로 인한 버그 발생.',
-      action: '발견한 컨벤션을 메모리에 명시 — "OGNL 큰따옴표 패턴", "BrNumberField → jdbcType=VARCHAR", "CASE WHEN 우선" 등.',
+      problem: '비슷한 코드라도 화면·개발자마다 미세한 컨벤션 차이가 생겨 버그·리뷰 부담 발생.',
+      action: '프로젝트에서 합의된 코드 컨벤션을 메모리·룰로 명시 → 새 코드도 같은 규칙을 자동으로 따르도록 가드.',
       result: '같은 패턴 실수 재발 방지. 코드 리뷰 시간 단축. 신규 화면도 동일 컨벤션 자동 준수.',
     },
     {
