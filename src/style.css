@@ -39,6 +39,9 @@ html, body {
   line-height: 1.6;
   font-size: 11pt;
   -webkit-font-smoothing: antialiased;
+  /* 한글이 글자 단위로 끊기지 않고 띄어쓰기(어절) 단위로 줄바꿈되게 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* ============================================================
