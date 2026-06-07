@@ -74,7 +74,7 @@ export const STACK = {
   ],
   tools: [
     { name: 'Claude Code',     level: '능숙' },
-    { name: 'Git / SVN',       level: '능숙' },
+    { name: 'SVN / Git',       level: '능숙' },
     { name: 'Maven',           level: '능숙' },
     { name: 'STS / Eclipse',   level: '능숙' },
     { name: 'VS Code',         level: '능숙' },
