@@ -344,7 +344,7 @@
         AS-IS → TO-BE 매핑 및 검증
       </h3>
       <ul class="contribution-list">
-        <li>매퍼 grep 분석으로 실제 사용 테이블 추출 → 마이그레이션 산출물(테이블 목록·정의서) 정합성 검증 자동화.</li><li>24건 잉여 정의서 식별 + 6건 누락 정의서 추가. 3종 매트릭스(테이블 목록 ↔ 테이블 정의서 ↔ 실제 매퍼) 비교 스크립트 작성.</li><li>AS-IS 마이그레이션 정책 준수 — 위험 발견 시 임의 개선 대신 협의 항목으로 분리.</li>
+        <li>매퍼 grep 분석으로 실제 사용 테이블 추출 → 마이그레이션 산출물(테이블 목록·정의서) 정합성 검증 자동화.</li><li>잉여·누락 정의서 수십 건을 식별·보완. 3종 매트릭스(테이블 목록 ↔ 테이블 정의서 ↔ 실제 매퍼) 비교 스크립트 작성.</li><li>AS-IS 마이그레이션 정책 준수 — 위험 발견 시 임의 개선 대신 협의 항목으로 분리.</li>
       </ul>
     </div>
   
@@ -475,7 +475,7 @@
         <div class="case-body">
           <div class="case-row"><span class="case-key">문제</span> <span class="case-val">AS-IS 산출물(테이블 목록·정의서)이 실제 사용 테이블과 일치하는지 수기 검증 부담.</span></div>
           <div class="case-row"><span class="case-key">접근</span> <span class="case-val">MyBatis 매퍼 XML을 grep으로 파싱 → 실제 사용 테이블 추출 → 테이블 목록 / 정의서 / 실제 매퍼 3종 매트릭스 비교 스크립트 작성.</span></div>
-          <div class="case-row case-result"><span class="case-key">결과</span> <span class="case-val">잉여 정의서 24건·누락 정의서 6건 자동 식별. 휴먼 에러 차단 + 산출물 신뢰도 향상.</span></div>
+          <div class="case-row case-result"><span class="case-key">결과</span> <span class="case-val">수십 건 규모의 잉여·누락 정의서를 자동 식별. 휴먼 에러 차단 + 산출물 신뢰도 향상.</span></div>
         </div>
       </div>
     
